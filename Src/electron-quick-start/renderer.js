@@ -4,3 +4,10 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+let closebtn = document.getElementById('win_close_btn');
+
+closebtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.closeCurrentWindow();
+});
