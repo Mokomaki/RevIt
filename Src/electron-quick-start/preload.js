@@ -1,8 +1,21 @@
-const fs = require('fs')
 const remote = require('electron').remote;
 
-window.test = function() 
+window.CloseWindow = function() 
 {
-    console.log(fs);
-    console.log(remote);
+    remote.BrowserWindow.getFocusedWindow().close();
+}
+window.MinimizeWindow = function() 
+{
+    remote.BrowserWindow.getFocusedWindow().minimize();
+}
+window.MaximizeWindow = function() 
+{
+    if(remote.BrowserWindow.getFocusedWindow().isMaximized())
+    {
+        remote.BrowserWindow.getFocusedWindow().unmaximize();
+    }
+    else
+    {
+        remote.BrowserWindow.getFocusedWindow().maximize();
+    }
 }

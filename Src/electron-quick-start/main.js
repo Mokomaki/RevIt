@@ -2,25 +2,31 @@ const {app, BrowserWindow, Menu} = require('electron');
 const path = require('path');
 
 let mainWindow;
+
 function createWindow () 
 {
   mainWindow = new BrowserWindow(
   {
-    width: 800,
+    width:  800,
     height: 600,
+    minHeight:  350,
+    minWidth:   450,
+    
     titleBarStyle: "hidden", 
+    frame: false,
+    icon: __dirname + '/Graphics/Icon.png',
+
     webPreferences: 
     {
+      enableRemoteModule: true,
       nodeIntegration: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
-  Menu.setApplicationMenu(new Menu());
-
   mainWindow.loadFile('index.html');
 
-  mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => 

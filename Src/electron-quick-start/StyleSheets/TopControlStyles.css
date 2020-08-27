@@ -1,0 +1,43 @@
+.ControlBar{
+    background-color: #1c3b52;
+    -webkit-app-region: drag;
+    overflow: hidden;
+}
+
+.ControlButton{
+    -webkit-app-region: no-drag;
+    width: 35px;
+    border: none;
+    margin-top: 2px;
+    margin-left: 5px;
+    margin: 0;
+    background: none;
+    float: right;
+    outline: none;
+}
+.ControlButton:hover{
+    background-color: #4E94C7;
+}
+
+.ExitButton{
+    -webkit-app-region: no-drag;
+    width: 35px;
+    border: none;
+    margin-top: 2px;
+    margin-left: 5px;
+    margin: 0;
+    background: none;
+    float: right;
+    outline: none;
+}
+.ExitButton:hover{
+    background-color: red;
+}
+
+.ControlButtonImage{
+    padding: 0;
+    margin: 0;
+    background: none;
+    width: 50%;
+    height: auto;
+}
