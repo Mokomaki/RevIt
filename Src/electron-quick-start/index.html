@@ -8,14 +8,18 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="StyleSheets/TopControlStyles.css">
+    <link rel="stylesheet" href="StyleSheets/GeneralStyles.css">
+
     <title>RevIt</title>
+    <link rel="icon" href="Graphics/Icon.png">
   </head>
   
   <body>
-    <div class = "TopControls">
-      <button class = "CloseButton" id = "win_close_btn"><img class = CloseButtonImg src=Graphics/exit_btn.png></button>
+    <div class="ControlBar">
+      <button class="ExitButton" id="win_close"><img class = "ControlButtonImage" src="Graphics/Close.png"></button>
+      <button class="ControlButton" id="win_max"><img class = "ControlButtonImage" src="Graphics/Maximize.png"></button>
+      <button class="ControlButton" id="win_min"><img class = "ControlButtonImage" src="Graphics/Minimize.png"></button>
     </div>
     
     <script src="renderer.js"></script>

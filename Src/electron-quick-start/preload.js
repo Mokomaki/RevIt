@@ -1,12 +1,21 @@
-// All of the Node.js APIs are available in the preload process.
-// It has the same sandbox as a Chrome extension.
+const remote = require('electron').remote;
 
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector);
-    if (element) element.innerText = text
-  }
-  for (const type of ['chrome', 'node', 'electron']) {
-    replaceText(`${type}-version`, process.versions[type]);
-  }
-})
+window.CloseWindow = function() 
+{
+    remote.BrowserWindow.getFocusedWindow().close();
+}
+window.MinimizeWindow = function() 
+{
+    remote.BrowserWindow.getFocusedWindow().minimize();
+}
+window.MaximizeWindow = function() 
+{
+    if(remote.BrowserWindow.getFocusedWindow().isMaximized())
+    {
+        remote.BrowserWindow.getFocusedWindow().unmaximize();
+    }
+    else
+    {
+        remote.BrowserWindow.getFocusedWindow().maximize();
+    }
+}
