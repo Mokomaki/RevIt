@@ -3,6 +3,22 @@ body{
     background-color: #305B7A;
 }
 
-#closeBtn{
-    background-color: #61B9FA;
+.CloseButton{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.CloseButtonImg{
+    width: 15%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.TopControls{
+    margin: 0;
+    padding: 0;
+    float: right;
 }

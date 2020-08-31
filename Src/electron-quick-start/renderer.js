@@ -5,9 +5,7 @@
 // selectively enable features needed in the rendering
 // process.
 
-let closebtn = document.getElementById('win_close_btn');
-
-closebtn.addEventListener('click', (e) => {
+document.getElementById('win_close_btn').addEventListener('click', (e) => {
   e.preventDefault();
-  window.closeCurrentWindow();
+  window.close();
 });
