@@ -5,8 +5,8 @@
   <head>
     <meta charset="UTF-8">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
     
     <link rel="stylesheet" href="StyleSheets/TopControlStyles.css">
     <link rel="stylesheet" href="StyleSheets/GeneralStyles.css">
@@ -21,6 +21,17 @@
       <button class="ControlButton" id="win_max"><img class = "ControlButtonImage" src="Graphics/Maximize.png"></button>
       <button class="ControlButton" id="win_min"><img class = "ControlButtonImage" src="Graphics/Minimize.png"></button>
     </div>
+
+
+    <div>
+      <form id="test_form">
+        <input type="text" name="bam">
+        <input type="button" name="dobby" value="Submit">
+      </form>
+
+      <p id="testii"></p>
+    </div>
+
     
     <script src="renderer.js"></script>
   

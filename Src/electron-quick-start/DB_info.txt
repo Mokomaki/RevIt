@@ -1,5 +1,5 @@
 USERNAME:   risto_h
-PASSWORD:   dbpasswordisristo
-IP:         185:85:170
+PASSWORD:   risto_h
+IP:         172.16.57.114
 PORT:       3306
 db:         risto_h

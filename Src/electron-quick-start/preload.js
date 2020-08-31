@@ -1,4 +1,6 @@
 const remote = require('electron').remote;
+const axios = require('axios');
+
 
 window.CloseWindow = function() 
 {
@@ -18,4 +20,15 @@ window.MaximizeWindow = function()
     {
         remote.BrowserWindow.getFocusedWindow().maximize();
     }
+}
+window._Post = function(args)
+{
+    axios.post('https://localhost:44348/api/testModels', args,)
+    .then(res => {
+    console.log(`statusCode: ${res.statusCode}`);
+    console.log(res);
+  })
+  .catch(error => {
+    console.error(error);
+  })
 }
