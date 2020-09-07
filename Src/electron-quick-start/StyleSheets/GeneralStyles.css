@@ -3,3 +3,28 @@ body{
     margin: 0;
     background-color: #305B7A;
 }
+
+.TopLeftNav{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+    background: none;
+    border: none;
+    outline: none;
+}
+.TopLeftNav:hover{
+    background-color: #4E94C7;
+}
+
+.TopLeftNavImage{
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    margin-left: 4px;
+    background: none;
+    width: 70%;
+    height: auto;
+}

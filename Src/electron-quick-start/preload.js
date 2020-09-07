@@ -1,7 +1,7 @@
 const remote = require('electron').remote;
 const axios = require('axios');
 
-
+//window controls
 window.CloseWindow = function() 
 {
     remote.BrowserWindow.getFocusedWindow().close();
@@ -21,6 +21,8 @@ window.MaximizeWindow = function()
         remote.BrowserWindow.getFocusedWindow().maximize();
     }
 }
+
+//http methods
 window._Post = function(args)
 {
     axios.post('https://localhost:44348/api/testModels', args,)

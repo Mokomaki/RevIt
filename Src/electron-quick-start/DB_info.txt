@@ -1,5 +1,12 @@
-USERNAME:   risto_h
-PASSWORD:   risto_h
-IP:         172.16.57.114
-PORT:       3306
-db:         risto_h
+SQL:
+    USERNAME:   risto_h
+    PASSWORD:   risto_h
+    IP:         172.16.57.114
+    PORT:       3306
+    db:         risto_h
+mySql:
+    USERNAME:   risto_h
+    PASSWORD:   dbpasswordisristo
+    IP:         185.53.85.170
+    PORT:       3306
+    db:         risto_h
