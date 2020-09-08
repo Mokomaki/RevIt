@@ -14,6 +14,7 @@
     background: none;
     float: right;
     outline: none;
+    border-radius: 5px;
 }
 .ControlButton:hover{
     background-color: #4E94C7;
@@ -29,6 +30,7 @@
     background: none;
     float: right;
     outline: none;
+    border-radius: 5px;
 }
 .ExitButton:hover{
     background-color: red;

@@ -14,6 +14,7 @@ body{
     background: none;
     border: none;
     outline: none;
+    border-radius: 5px;
 }
 .TopLeftNav:hover{
     background-color: #4E94C7;

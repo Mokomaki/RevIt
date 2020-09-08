@@ -13,21 +13,15 @@ document.getElementById("win_max").addEventListener('click', function()
 });
 
 
-
-//http
-const rqst = {
-  id: 1,
-  name: 'jesse'
-};
-
-//test submit
-document.getElementById("test_form").elements["dobby"].addEventListener('click', function()
+document.getElementById("postForm").elements["postBTN"].addEventListener('click',function()
 {
-  document.getElementById("testii").innerHTML = document.getElementById("test_form").elements["bam"].value;
+  var categorySelection = document.getElementById("categoryOPT");
+  var category = categorySelection.options[categorySelection.selectedIndex].value;
+  var title = document.getElementById("postTitle").value;
   
-  rqst.name = document.getElementById("test_form").elements["bam"].value;
+  console.log(title);
+  console.log(category);
+  console.log(quill.getContents());
 
-  
-  window._Post(rqst);
-
+  window.AddPost(0, title, quill.getContents(), category);
 });

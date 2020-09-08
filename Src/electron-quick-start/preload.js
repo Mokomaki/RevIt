@@ -1,6 +1,5 @@
 const remote = require('electron').remote;
-const axios = require('axios');
-
+const sql = require('mysql');
 //window controls
 window.CloseWindow = function() 
 {
@@ -22,15 +21,58 @@ window.MaximizeWindow = function()
     }
 }
 
-//http methods
-window._Post = function(args)
+window.AddPost = function(authorID, title, contents, categoryID)
 {
-    axios.post('https://localhost:44348/api/testModels', args,)
-    .then(res => {
-    console.log(`statusCode: ${res.statusCode}`);
-    console.log(res);
-  })
-  .catch(error => {
-    console.error(error);
-  })
+    var connection = sql.createConnection(
+        {
+            host     : '185.53.85.170',
+            port     : '3306',
+            user     : 'risto_h',
+            password : 'dbpasswordisristo',
+            database : 'risto_h'
+        }
+    );    
+    
+    connection.connect(
+        function(err) {
+            if (err) {
+              return console.log('error:' + err.message);
+            }
+            else
+            {
+                console.log('connected jee vittu');
+            }
+            
+        }
+    );
+
+    
+    
+    if(authorID!=null&&title!=null&&contents!=null&&categoryID!=null)
+    {
+        var command = 'INSERT INTO `posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ('+ authorID + ',' + title + ',' + contents + ',' + categoryID + ');'
+        console.log(command);
+        console.log(connection);
+        
+        connection.query(command, function (error, results, fields) 
+        {
+            if (error) console.log(error.code);
+            else 
+            {
+                console.log(results);
+            }
+        });
+    }
+
+    console.log(connection);
+
+    connection.end(
+        function(err) {
+            if (err) {
+              return console.log('error:' + err.message);
+            }
+            console.log('Close the database connection.');
+        }
+    );
+    
 }

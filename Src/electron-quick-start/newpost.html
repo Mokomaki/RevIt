@@ -29,24 +29,37 @@
     <a class = "TopLeftNav" href="index.html"><img class ="TopLeftNavImage" src="Graphics/BackToMain.png"></a>
 
     <center>
-      <div class="editorContainer">
-        <div id="editor">
-          <p>Hello World!</p>
-          <p>Some initial <strong>bold</strong> text</p>
-          <p><br></p>
+      <form id="postForm">
+        Title: <input type="text" id="postTitle"><br>
+
+        <div class="editorContainer">
+          <div id="editor">
+            <p>Hello World!</p>
+            <p>Some initial <strong>bold</strong> text</p>
+            <p><br></p>
+          </div>
         </div>
-    </div>
+
+        <select id="categoryOPT">
+          <option value=0>other</option>
+          <option value=1>Movie/Series</option>
+          <option value=2>Game</option>
+          <option value=3>Book</option>
+          <option value=4>Music</option>
+        </select>
+
+        <input type="button" name="postBTN" value="Submit">
+      </form>
     </center>
 
     <script src="quill.js"></script>
-
-    <!-- Initialize Quill editor -->
-
     <script>
       var quill = new Quill('#editor', {
       theme: 'snow'
     });
     </script>
+
+
 
     <!--
     <div>
