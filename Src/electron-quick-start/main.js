@@ -8,8 +8,8 @@ function createWindow ()
   mainWindow = new BrowserWindow(
   {
     width:  800,
-    height: 600,
-    minHeight:  350,
+    height: 650,
+    minHeight:  650,
     minWidth:   450,
     
     titleBarStyle: "hidden", 

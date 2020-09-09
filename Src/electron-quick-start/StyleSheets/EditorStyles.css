@@ -8,8 +8,9 @@
     max-height: 400px;
     max-width: 500px;
     background-color: white;
-    margin-top: 50px;
+    margin-top: 20px;
     padding-bottom: 50px;
+    border-radius: 20px;
 }
 
 #editor {
@@ -17,8 +18,59 @@
     flex: 1;
     overflow-y: auto;
     width: 100%;
+
 }
 
+#postBTN{
+  margin-top: 50px;
+  height: 30px;
+  width: 15%;
+  max-width: 80px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  outline: none;
+  background-color: #1c3b52;
+  color: #ADDAFB;
+}
+#postBTN:hover{
+  background-color: #437ba3;
+}
+#postBTN:focus{
+  background-color: #2d5572;
+}
+
+#categoryOPT{
+  color: #ADDAFB;
+  margin-top: 10px;
+  height: 30px;
+  width: 13%;
+  max-width: 130px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  background-color: #1c3b52;
+  outline: none;
+}
+#categoryOPT:hover{
+  background-color: #437ba3;
+}
+
+.categoryMENU{
+  outline: none;
+  border: none;
+}
+
+#postTitle{
+  margin-top: 25px;
+  height: 30px;
+  width: 20%;
+  max-width: 200px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  outline: none;
+}
 
 /*!
  * Quill Editor v1.3.6

@@ -1,6 +1,6 @@
 const remote = require('electron').remote;
 const sql = require('mysql');
-//window controls
+//window controls  
 window.CloseWindow = function() 
 {
     remote.BrowserWindow.getFocusedWindow().close();
@@ -23,7 +23,7 @@ window.MaximizeWindow = function()
 
 window.AddPost = function(authorID, title, contents, categoryID)
 {
-    var connection = sql.createConnection(
+    const connection = sql.createConnection(
         {
             host     : '185.53.85.170',
             port     : '3306',
@@ -31,8 +31,8 @@ window.AddPost = function(authorID, title, contents, categoryID)
             password : 'dbpasswordisristo',
             database : 'risto_h'
         }
-    );    
-    
+    ); 
+
     connection.connect(
         function(err) {
             if (err) {
@@ -45,12 +45,10 @@ window.AddPost = function(authorID, title, contents, categoryID)
             
         }
     );
-
-    
     
     if(authorID!=null&&title!=null&&contents!=null&&categoryID!=null)
     {
-        var command = 'INSERT INTO `posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ('+ authorID + ',' + title + ',' + contents + ',' + categoryID + ');'
+        var command = 'INSERT INTO `risto_h.posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ('+ authorID + ',' + title + ',' + JSON.stringify(contents) + ',' + categoryID + ');'
         console.log(command);
         console.log(connection);
         
@@ -71,7 +69,7 @@ window.AddPost = function(authorID, title, contents, categoryID)
             if (err) {
               return console.log('error:' + err.message);
             }
-            console.log('Close the database connection.');
+            console.log('ended connection');
         }
     );
     

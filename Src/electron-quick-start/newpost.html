@@ -30,25 +30,23 @@
 
     <center>
       <form id="postForm">
-        Title: <input type="text" id="postTitle"><br>
+        <input type="text" placeholder="Title" id="postTitle"><br>
 
         <div class="editorContainer">
           <div id="editor">
-            <p>Hello World!</p>
-            <p>Some initial <strong>bold</strong> text</p>
-            <p><br></p>
+
           </div>
         </div>
 
         <select id="categoryOPT">
-          <option value=0>other</option>
-          <option value=1>Movie/Series</option>
-          <option value=2>Game</option>
-          <option value=3>Book</option>
-          <option value=4>Music</option>
+          <option value=0 class="categoryMENU">other</option>
+          <option value=1 class="categoryMENU">Movie/Series</option>
+          <option value=2 class="categoryMENU">Game</option>
+          <option value=3 class="categoryMENU">Book</option>
+          <option value=4 class="categoryMENU">Music</option>
         </select>
 
-        <input type="button" name="postBTN" value="Submit">
+        <input type="button" id="postBTN" name="postBTN" value="Submit">
       </form>
     </center>
 
