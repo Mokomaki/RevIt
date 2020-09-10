@@ -11,6 +11,7 @@
     margin-top: 20px;
     padding-bottom: 50px;
     border-radius: 20px;
+    text-align: center;
 }
 
 #editor {
@@ -23,9 +24,9 @@
 
 #postBTN{
   margin-top: 50px;
-  height: 30px;
-  width: 15%;
-  max-width: 80px;
+  height: 35px;
+  width: 13%;
+  max-width: 130px;
   border-radius: 10px;
   border: none;
   text-align: center;
@@ -34,6 +35,8 @@
   color: #ADDAFB;
 }
 #postBTN:hover{
+  width: 15%;
+  max-width: 140px;
   background-color: #437ba3;
 }
 #postBTN:focus{
@@ -43,7 +46,7 @@
 #categoryOPT{
   color: #ADDAFB;
   margin-top: 10px;
-  height: 30px;
+  height: 35px;
   width: 13%;
   max-width: 130px;
   border-radius: 10px;
@@ -54,16 +57,20 @@
 }
 #categoryOPT:hover{
   background-color: #437ba3;
+  width: 15%;
+  max-width: 140px;
 }
 
-.categoryMENU{
-  outline: none;
-  border: none;
+#categoryOPT:focus{
+  background-color: #437ba3;
+  width: 15%;
+  max-width: 140px;
 }
+
 
 #postTitle{
   margin-top: 25px;
-  height: 30px;
+  height: 35px;
   width: 20%;
   max-width: 200px;
   border-radius: 10px;
@@ -71,6 +78,16 @@
   text-align: center;
   outline: none;
 }
+
+#postTitle:hover{
+  width: 22%;
+  max-width: 220px;
+}
+#postTitle:focus{
+  width: 22%;
+  max-width: 220px;
+}
+
 
 /*!
  * Quill Editor v1.3.6

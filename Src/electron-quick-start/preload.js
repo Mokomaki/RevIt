@@ -25,24 +25,20 @@ window.AddPost = function(authorID, title, contents, categoryID)
 {
     const connection = sql.createConnection(
         {
-            host     : '185.53.85.170',
-            port     : '3306',
-            user     : 'risto_h',
-            password : 'dbpasswordisristo',
-            database : 'risto_h'
+            host     : "185.53.85.170",
+            port     : "3306",
+            user     : "risto_h",
+            password : "dbpasswordisristo",
+            database : "risto_h"
         }
-    ); 
+    );
 
-    connection.connect(
-        function(err) {
-            if (err) {
-              return console.log('error:' + err.message);
-            }
+    connection.connect((err)=> {
+            if (err) throw err;
             else
             {
-                console.log('connected jee vittu');
+                alert('connected jee vittu');
             }
-            
         }
     );
     

@@ -1,0 +1,46 @@
+C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\preload.js:37 Uncaught Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (events.js:416:28)
+    at Socket.emit (events.js:310:20)
+    at Socket._onTimeout (net.js:479:8)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+    --------------------
+    at Protocol._enqueue (C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at Connection.connect (C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\node_modules\mysql\lib\Connection.js:116:18)
+    at window.AddPost (C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\preload.js:36:16)
+    at HTMLInputElement.<anonymous> (file:///C:/Users/DAT19-Risto%20Haila/Desktop/Tuotantoversiontoteuttaminen/Src/electron-quick-start/renderer.js:22:10)
+Connection._handleConnectTimeout @ C:\Users\DAT19-Risto Haila\Desktop\Tuotantoversiontoteuttaminen\Src\electron-quick-start\node_modules\mysql\lib\Connection.js:409
+onceWrapper @ events.js:416
+emit @ events.js:310
+Socket._onTimeout @ net.js:479
+listOnTimeout @ internal/timers.js:549
+processTimers @ internal/timers.js:492'
+
+
+
+
+
+
+
+ 2: 00007FF6A3030072 node::InternalCallbackScope::Close+162
+ 3: 00007FF6A302FF3D node::InternalCallbackScope::~InternalCallbackScope+13
+ 4: 00007FF6A3048F1E node::EmitAsyncDestroy+88206
+ 5: 00007FF6A307C5F4 uv_timer_again+212
+ 6: 00007FF6A307F3B8 uv_run+168
+ 7: 00007FF6A03B7FD1 v8::OutputStream::WriteHeapStatsChunk+17121
+ 8: 00007FF6A28176FC uv_mutex_unlock+2521484
+ 9: 00007FF6A30C6FC4 uv_gettimeofday+278804
+10: 00007FF6A30C6CA8 uv_gettimeofday+278008
+11: 00007FF6A30B751B uv_gettimeofday+214635
+12: 00007FF6A30C75BE uv_gettimeofday+280334
+13: 00007FF6A28015AC uv_mutex_unlock+2431036
+14: 00007FF6A2F471D4 IsSandboxedProcess+2252276
+15: 00007FF6A1BF5121 v8_inspector::V8StackTraceId::ToString+5677249
+16: 00007FF6A2D8744B IsSandboxedProcess+417899
+17: 00007FF6A0E89CFE v8::Location::GetColumnNumber+781918
+18: 00007FF6A026149F Ordinal0+5279
+19: 00007FF6A62F8EB2 uv_random+16902610
+20: 00007FFA6C677BD4 BaseThreadInitThunk+20
+21: 00007FFA6D12CE51 RtlUserThreadStart+33

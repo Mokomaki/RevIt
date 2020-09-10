@@ -1,0 +1,51 @@
+#cardsContainer{
+    margin: none;
+    padding: none;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 80%;
+    height: 80%;
+    table-layout: auto;
+}
+
+.card{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 200px;
+    width: 150px;
+    background-color: #1c3b52;
+    border-radius: 10px;
+    color: #ADDAFB;
+    text-align: center;
+}
+
+.card:hover{
+    background-color: #204968;
+    color: #ADDAFB;
+    height: 210px;
+    width: 160px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.card h1{
+    margin-top: 10px;
+}
+.card hr{
+    margin-top: 5px;
+    margin-bottom: 80px;
+    width: 80%;
+}
+
+#upvotes{
+    offset-position: -20px;
+}
+
+.card img{
+    height: 10px;
+    width: 10px;
+}
+
+.card span{
+    
+}
