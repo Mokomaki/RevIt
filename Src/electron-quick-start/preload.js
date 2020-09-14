@@ -37,7 +37,7 @@ window.AddPost = function(authorID, title, contents, categoryID)
             if (err) throw err;
             else
             {
-                alert('connected jee vittu');
+                alert('connected');
             }
         }
     );
@@ -65,7 +65,7 @@ window.AddPost = function(authorID, title, contents, categoryID)
             if (err) {
               return console.log('error:' + err.message);
             }
-            console.log('ended connection');
+            console.log('connection ended');
         }
     );
     
