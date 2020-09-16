@@ -1,10 +1,11 @@
 ::-webkit-scrollbar {
     width: 10px;
+    overflow: hidden;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: white; 
+    background: #305B7A; 
   }
    
   /* Handle */
@@ -17,5 +18,5 @@
     background: #61B9FA; 
   }
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
   }

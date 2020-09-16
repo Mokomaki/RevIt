@@ -1,7 +1,7 @@
 #cardsContainer{
     margin: none;
     padding: none;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px;
     width: 80%;
     height: 80%;
@@ -26,11 +26,16 @@
 .card:hover{
     background-color: #204968;
     color: #ADDAFB;
-    height: 210px;
+
     width: 160px;
-    margin-top: 15px;
+
     margin-left: 15px;
 }
+
+/*
+    height: 210px;
+    margin-top: 15px;
+*/
 
 .card h1{
     padding: 0;
@@ -56,6 +61,7 @@
     outline: none;
     color: #ADDAFB;
     font-family: Arial, Helvetica, sans-serif;
+    background-color:  #152e41;
 }
 .card button:hover{
     position: bottom;
@@ -63,7 +69,7 @@
     background: none;
     background-color: #4E94C7;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .card p{

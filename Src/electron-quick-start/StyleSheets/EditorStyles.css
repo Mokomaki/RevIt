@@ -45,7 +45,7 @@
 #postBTN:hover{
   width: 15%;
   max-width: 140px;
-  background-color: #437ba3;
+  background-color: #204968;
 }
 #postBTN:focus{
   background-color: #2d5572;
@@ -65,7 +65,7 @@
   box-shadow: 2px 2px 4px #000000;
 }
 #categoryOPT:hover{
-  background-color: #437ba3;
+  background-color: #204968;
   width: 15%;
   max-width: 140px;
 }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="StyleSheets/GeneralStyles.css">
     <link rel="stylesheet" href="StyleSheets/CardStyles.css">
     <link rel="stylesheet" href="StyleSheets/Scrollbar.css">
+    <link rel="stylesheet" href="StyleSheets/SearchStyles.css">
 
     <title>RevIt</title>
     <link rel="icon" href="Graphics/Icon.png">
@@ -27,6 +28,25 @@
     <a class = "TopLeftNav" href="newpost.html"><img class ="TopLeftNavImage" src="Graphics/NewPost.png"></a>
 
     <div class="main">
+
+      <center>
+        <form>
+          <input type="text" placeholder="Search..." id="SearchString">
+  
+          <select id="categoryOPT">
+            <option>Category</option>
+            <option value=0>other</option>
+            <option value=1>Movie/Series</option>
+            <option value=2>Game</option>
+            <option value=3>Book</option>
+            <option value=4>Music</option>
+          </select>
+
+          <input type="submit" id="SearchBTN" name="SearchBTN" value=">">
+        </form>
+      </center>
+
+
       <ul id="cardsContainer">
         <div class="card">
           <h1>Title</h1>
