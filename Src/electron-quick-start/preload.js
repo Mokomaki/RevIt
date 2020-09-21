@@ -1,5 +1,6 @@
 const remote = require('electron').remote;
 const sql = require('mysql');
+
 //window controls  
 window.CloseWindow = function() 
 {
@@ -37,14 +38,14 @@ window.AddPost = function(authorID, title, contents, categoryID)
             if (err) throw err;
             else
             {
-                alert('connected');
+                console.log('connected');
             }
         }
     );
     
     if(authorID!=null&&title!=null&&contents!=null&&categoryID!=null)
     {
-        var command = 'INSERT INTO `risto_h.posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ('+ authorID + ',' + title + ',' + JSON.stringify(contents) + ',' + categoryID + ');'
+        var command = 'INSERT INTO `risto_h.posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ("'+ authorID + '","' + title + '","' + JSON.stringify(contents) + '","' + categoryID + '");'
         console.log(command);
         console.log(connection);
         
