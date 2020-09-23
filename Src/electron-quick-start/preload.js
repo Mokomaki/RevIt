@@ -24,7 +24,7 @@ window.MaximizeWindow = function()
 
 window.AddPost = function(authorID, title, contents, categoryID)
 {
-    const connection = sql.createConnection(
+    var connection = sql.createConnection(
         {
             host     : "185.53.85.170",
             port     : "3306",
@@ -42,13 +42,10 @@ window.AddPost = function(authorID, title, contents, categoryID)
             }
         }
     );
-    
+
     if(authorID!=null&&title!=null&&contents!=null&&categoryID!=null)
     {
-        var command = 'INSERT INTO `risto_h.posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ("'+ authorID + '","' + title + '","' + JSON.stringify(contents) + '","' + categoryID + '");'
-        console.log(command);
-        console.log(connection);
-        
+        var command = 'INSERT INTO `posts` (`authorID`,`title`,`contents`,`categoryID`) VALUES ("'+ authorID + '","' + title + '",' +"'" + JSON.stringify(contents) + "'" + ',"' + categoryID + '");'
         connection.query(command, function (error, results, fields) 
         {
             if (error) console.log(error.code);
@@ -59,8 +56,6 @@ window.AddPost = function(authorID, title, contents, categoryID)
         });
     }
 
-    console.log(connection);
-
     connection.end(
         function(err) {
             if (err) {
@@ -69,5 +64,4 @@ window.AddPost = function(authorID, title, contents, categoryID)
             console.log('connection ended');
         }
     );
-    
 }
