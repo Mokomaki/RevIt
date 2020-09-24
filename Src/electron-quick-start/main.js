@@ -25,36 +25,21 @@ ipcMain.on('GET_CONTENTS_BY_ID', function(event,arg)
   connection.connect(function(err)
   {
     if (err) throw err;
-    else
-    {
-        console.log('connected');
-    }
   });
-
-  connection.query('SELECT `contents` FROM `risto_h`.`posts` WHERE `postID` = 6', function (error, results, fields) 
+  connection.query('SELECT `contents` FROM `risto_h`.`posts` WHERE `postID` = ' + postPageID, function (error, results, fields) 
   {
     if(error) throw error;
     var dec = new TextDecoder("utf-8");
     contentObject = Object.assign({}, results);
     event.reply('GET_CONTENTS_BY_ID_REPLY', dec.decode(contentObject[0].contents));
-    console.log(dec.decode(contentObject[0].contents))
   });
-/*con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT contents FROM risto_h.posts WHERE postID = 5", function (err, result, fields) {
-    if (err) throw err;
-    trivial_object = Object.assign({}, result);
-    dec = new TextDecoder("utf-8");
-    console.log(dec.decode(trivial_object[0].contents));
-  });
-}); */
+
   connection.end(function(err) 
   {
     if (err) 
     {
       return console.log('error:' + err.message);
     }
-    console.log('connection ended');
   });
 });
 
@@ -75,10 +60,7 @@ ipcMain.on('ADDPOST_SEND_QUERY', (event, arg) =>
   connection.connect(function(err)
   {
     if (err) throw err;
-    else
-    {
-        console.log('connected');
-    }
+
   });
 
   connection.query(command, function (error, results, fields) 
@@ -90,10 +72,12 @@ ipcMain.on('ADDPOST_SEND_QUERY', (event, arg) =>
     } 
     else 
     {
-      connection.query('SELECT last_insert_id();', function (error, results, fields) 
+      postPageID = results.insertId;
+      event.reply('ADDPOST_REPLY_QUERY', results);
+      /*connection.query('SELECT last_insert_id();', function (error, results, fields) 
       {
         event.reply('ADDPOST_REPLY_QUERY', results);
-      });
+      });*/
     }
   });
 
@@ -103,7 +87,6 @@ ipcMain.on('ADDPOST_SEND_QUERY', (event, arg) =>
     {
       return console.log('error:' + err.message);
     }
-    console.log('connection ended');
   });
 });
 

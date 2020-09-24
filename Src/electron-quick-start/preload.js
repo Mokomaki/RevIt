@@ -42,7 +42,7 @@ ipcRenderer.on('ADDPOST_REPLY_QUERY', function(event, arg)
     else
     {
         window.location.href = "readpost.html";
-        ipcRenderer.send('SET_POSTPAGE_ID',arg);
+        //ipcRenderer.send('SET_POSTPAGE_ID',arg);
         //document.getElementById("post_container").innerHTML = convertDeltaToHtml(arg);
         //console.log(arg);
     }
@@ -55,6 +55,7 @@ window.GetPostContentsById = function()
 ipcRenderer.on('GET_CONTENTS_BY_ID_REPLY', function(event, arg) 
 {
     console.log(arg);
+    console.log(quillGetHTML(arg));
     document.getElementById("post_container").innerHTML = quillGetHTML(arg);
 })
 function quillGetHTML(inputDelta) {
