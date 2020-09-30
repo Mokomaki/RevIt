@@ -106,8 +106,17 @@ ipcRenderer.on('PARSE_POST_ARRAY',function(event,result)
         postELEMENT.innerHTML = '<h1>' + title + '</h1><hr><p>' + sampleText + '</p><p id ="id_text">' + id + '</p>';
         postELEMENT.addEventListener('click',function(e)
         {
-            console.log(e.target);
-            var setID = e.target.lastChild.innerHTML;
+            var idElement;
+            if(e.target.tagName.toLowerCase() != 'div')
+            {
+                idElement = e.target.parentElement;
+            }
+            else
+            {
+                idElement = e.target;
+            }
+            console.log(idElement);
+            var setID = idElement.lastChild.innerHTML;
             if(setID == null)
             {
                 console.log("ERROR");
