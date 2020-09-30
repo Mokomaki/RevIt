@@ -30,7 +30,7 @@
     <div class="main">
 
       <center>
-        <form>
+        <form id="search_form">
           <input type="text" placeholder="Search..." id="SearchString">
   
           <select id="categoryOPT">
@@ -42,148 +42,19 @@
             <option value=4>Music</option>
           </select>
 
-          <input type="submit" id="SearchBTN" name="SearchBTN" value=">">
+          <input type="button" id="SearchBTN" name="SearchBTN" value=">">
         </form>
       </center>
 
 
       <ul id="cardsContainer">
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-  
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-        <div class="card">
-          <h1>Title</h1>
-          <hr>
-          <p>Sample text from the article. The length should be about two paragraphs.</p>
-          <button id="upvotes">
-            <img src="Graphics/upvote.png">
-            <span>500</span>
-          </button>
-          <p>by: BIGBOI</p>
-        </div>
-  
+
       </ul>
+
+      <p id="error"></p>
     </div>
    
-    
+    <script src="mainRenderer.js"></script>
     <script src="ApplicationControls.js"></script>
   
   </body>

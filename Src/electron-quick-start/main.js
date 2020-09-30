@@ -5,10 +5,80 @@ const sql = require('mysql');
 let mainWindow;
 var postPageID;
 
+ipcMain.on('GET_ALL_POSTS', function(event,arg)
+{
+  var connection = sql.createConnection(
+    {
+        host     : "185.53.85.170",
+        port     : "3306",
+        user     : "risto_h",
+        password : "dbpasswordisristo",
+        database : "risto_h"
+    }
+  );
+
+  connection.connect(function(err)
+  {
+    if (err) throw err;
+  });
+  connection.query('SELECT `postID`,`title`,`contents` FROM risto_h.posts;', function (error, results, fields) 
+  {
+    if(error) throw error;
+    //var dec = new TextDecoder("utf-8");
+    event.reply('PARSE_POST_ARRAY', results);
+    //contentObject = Object.assign({}, results);
+    //event.reply('GET_CONTENTS_BY_ID_REPLY', dec.decode(contentObject[0].contents));
+  });
+
+  connection.end(function(err) 
+  {
+    if (err) 
+    {
+      return console.log('error:' + err.message);
+    }
+  });
+})
+
 ipcMain.on('SET_POSTPAGE_ID', function(event,arg)
 {
+  console.log(arg);
   postPageID = arg;
 });
+
+ipcMain.on('GET_TITLE_BY_ID', function(event,arg)
+{
+  var connection = sql.createConnection(
+    {
+        host     : "185.53.85.170",
+        port     : "3306",
+        user     : "risto_h",
+        password : "dbpasswordisristo",
+        database : "risto_h"
+    }
+  );
+
+  connection.connect(function(err)
+  {
+    if (err) throw err;
+  });
+  connection.query('SELECT `title` FROM `risto_h`.`posts` WHERE `postID` = ' + postPageID, function (error, results, fields) 
+  {
+    if(error) throw error;
+    //var dec = new TextDecoder("utf-8");
+    contentObject = Object.assign({}, results);
+    event.reply('GET_TITLE_BY_ID_REPLY', contentObject[0].title);
+    //event.reply('GET_TITLE_BY_ID_REPLY', results);
+  });
+
+  connection.end(function(err) 
+  {
+    if (err) 
+    {
+      return console.log('error:' + err.message);
+    }
+  });
+});
+
 
 ipcMain.on('GET_CONTENTS_BY_ID', function(event,arg)
 {
@@ -89,6 +159,8 @@ ipcMain.on('ADDPOST_SEND_QUERY', (event, arg) =>
     }
   });
 });
+
+
 
 function createWindow () 
 {

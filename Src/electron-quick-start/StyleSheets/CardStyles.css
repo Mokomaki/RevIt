@@ -10,6 +10,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#id_text{
+    display: none;
+}
+
 .card{
     margin-top: 20px;
     margin-left: 20px;

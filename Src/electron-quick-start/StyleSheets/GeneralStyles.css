@@ -4,6 +4,11 @@ body{
     background-color: #305B7A;
 }
 
+#error{
+    color: red;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 .main{
     position:absolute;
     top: 20px;
