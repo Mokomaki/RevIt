@@ -79,7 +79,6 @@ ipcMain.on('GET_TITLE_BY_ID', function(event,arg)
   });
 });
 
-
 ipcMain.on('GET_CONTENTS_BY_ID', function(event,arg)
 {
   var connection = sql.createConnection(
@@ -159,8 +158,6 @@ ipcMain.on('ADDPOST_SEND_QUERY', (event, arg) =>
     }
   });
 });
-
-
 
 function createWindow () 
 {
